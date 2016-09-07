@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<section class="story" id="first">
+	<article>
+		<h2>Section one</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+	</article>
+	<a href="#second" class="skip-section"><span class="hide">skip down</span></a>
+</section>
+
+<section class="story" id="second">
+	<article>
+		<h2>Section two</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+	</article>
+	<a href="#third" class="skip-section"><span class="hide">skip down</span></a>
+</section>
+
+<section class="story" id="third">
+	<article>
+		<h2>Section three</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+	</article>
+	<a href="#fourth" class="skip-section"><span class="hide">skip down</span></a>
+</section>
+
+<section class="story" id="fourth">
+	<article>
+		<h2>Section four</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+	</article>
+	<a href="#fifth" class="skip-section"><span class="hide">skip down</span></a>
+</section>
+
+<section class="story" id="fifth">
+
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/parallax.min.js"></script>
+<script type="text/javascript">
+	$(window).load(function () {
+        $('.story').parallax({'speed': 3});
+        });
+        $(document).ready(function () {
+            $('.skip-section').on('click', function (e) {
+                e.preventDefault();
+                $('body').animate({
+                    scrollTop: $(this).offset().top
+                }, 1000);
+        });
+    });
+</script>
+</body>
+</html>
